@@ -34,4 +34,24 @@ $(document).ready(function () {
   $('tr input').on('input', function () {
     updateCartTotal ();
   });
+
+  $('#addItem').on('click', function (event) {
+    event.preventDefault();
+    var item= $(this).children('[name=item]').val();
+    var itemPrice= $(this).children('[name=itemPrice]').val();
+    
+
+    $('tbody').append('<tr>' + 
+      '<td class="item">' + item + '</td>' +
+      '<td class="itemPrice">' + itemPrice + '</td>' +
+      '<td class="quantity"><input type="number" value"0" /></td>' +
+      '<td><button class="btn btn-light btn-sm remove">Remove</button></td>' +
+      '<td class="text-center totalItemValue"> </td>' +
+      '</tr>');
+
+    updateCartTotal ();
+    $(this).children('[name=item]').val('');
+    $(this).children('[name=itemPrice]').val('');
+    
+  });
 });
