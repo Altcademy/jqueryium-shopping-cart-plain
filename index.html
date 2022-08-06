@@ -34,43 +34,56 @@
             </thead>
             <tbody>
               <tr>
-                <td class="name">Salmon</td>
+                <td class="item">Salmon</td>
                 <td class="itemPrice">$60.00</td>
                 <td class="quantity"><input type="number" value="0" /></td>
                 <td><button class="btn btn-light btn-sm">Cancel</button></td>
                 <td class="totalPrice"></td>
               </tr>
               <tr>
-                <td class="name">Tuna</td>
+                <td class="item">Tuna</td>
                 <td class="itemPrice">$50.00</td>
                 <td class="quantity"><input type="number" value="0" /></td>
                 <td><button class="btn btn-light btn-sm">Cancel</button></td>
                 <td class="totalPrice"></td>
               </tr>
               <tr>
-                <td class="name">Carp</td>
+                <td class="item">Carp</td>
                 <td class="itemPrice">$40.00</td>
                 <td class="quantity"><input type="number" value="0" /></td>
                 <td><button class="btn btn-light btn-sm">Cancel</button></td>
                 <td class="totalPrice"></td>
               </tr>
               <tr>
-                <td class="name">Pork</td>
+                <td class="item">Pork</td>
                 <td class="itemPrice">$50.00</td>
                 <td class="quantity"><input type="number" value="0" /></td>
                 <td><button class="btn btn-light btn-sm">Cancel</button></td>
                 <td class="totalPrice"></td>
               </tr>
               <tr>
-                <td class="name">Beef</td>
+                <td class="item">Beef</td>
                 <td class="itemPrice">$40.00</td>
                 <td class="quantity"><input type="number" value="0" /></td>
                 <td><button class="btn btn-light btn-sm">Cancel</button></td>
                 <td class="totalPrice"></td>
+              </tr>
+              <tr>
+                <td scope="col"><input class="mx-2" name="item" type="text" placeholder="Turkey" required /></td>
+                <td scope="col"><input class="mx-2" name="itemPrice" type="text" placeholder="$15.00" required /></td>
+                <td scope="col"><button class="btn btn-primary btn-sm">Add</button></td>
+                <td scope="col"></td>
+                <td scope="col"></td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <div class="col-12 col-md-6">
+          <h1>Total Price: </h1>
+          <h1>$ <span id="cartPrice"></span></h1>
+        </div>
+
       </div>
     </div>
   </body>
