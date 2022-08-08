@@ -68,16 +68,17 @@
                 <td><button class="btn btn-light btn-sm remove">Remove</button></td>
                 <td class="text-center totalItemValue"> </td>
               </tr>
-              <tr>
-                <td scope="col"><input class="mx-2" name="item" type="text" placeholder="Turkey" required /></td>
-                <td scope="col"><input class="mx-2" name="itemPrice" type="text" placeholder="$15.00" /></td>
-                <td class="quantity"><input name="new-quantity" type="number" value="0" disabled></td>
-                <td scope="col"><button class="btn btn-primary btn-sm" id="addItem">Add</button></td>
-                <td class="text-center totalItemValue hidden" value=" "></td>
-              </tr>
             </tbody>
           </table>
         </div>
+
+        <form class="col-12 mt-2 mb-4" id="addItem">
+          <input class="mx-2" name="item" type="text" placeholder="Turkey" required/>
+          <input class="mx-2" name="itemPrice" type="text" placeholder="$30.00" />
+          <input class="mx-2" nmae="quantity" type="text" placeholder="How many?" disabled/>
+          <button class="bton btn-primary btn-sm">Add</button>
+
+        </form>
 
         <div class="col-12 col-md-6">
           <h1>Total Cart Price: </h1>
