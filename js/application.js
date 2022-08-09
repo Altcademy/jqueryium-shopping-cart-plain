@@ -33,7 +33,7 @@ $(document).ready(function () {
   
   $(document).on('click', '.btn.remove', function (event) {
     $(this).closest('tr').remove();
-    updateCartTotal;
+    updateCartTotal();
   });
 
   var timeout;
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     $('tbody').append('<tr>' + 
       '<td class="item">' + item + '</td>' +
-      '<td class="itemPrice"> $' + itemPrice + '.00 </td>' +
+      '<td class="itemPrice">$' + itemPrice + '.00 </td>' +
       '<td class="quantity"><input type="number" value="0" /></td>' +
       '<td><button class="btn btn-light btn-sm remove">Remove</button></td>' +
       '<td class="text-center totalItemValue"> </td>' +
