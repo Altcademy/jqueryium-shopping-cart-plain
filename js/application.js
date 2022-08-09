@@ -31,24 +31,29 @@ var updateCartTotal = function () {
 $(document).ready(function () {
   updateCartTotal ();
   
-  $(document).on('.btn.remove', 'click', function (event) {
+  $(document).on('click', '.btn.remove', function (event) {
     $(this).closest('tr').remove();
     updateCartTotal;
   });
 
-  $('tr input').on('input', function () {
-    updateCartTotal ();
+  var timeout;
+  $(document).on('input', 'tr input', function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      updateCartTotal ();
+    }, 1000);
   });
 
   $('#addItem').on('submit', function (event) {
     event.preventDefault();
     var item= $(this).children('[name=item]').val();
     var itemPrice= $(this).children('[name=itemPrice]').val();
+    var quantity= $(this).children('[name=quantity]').val();
     
 
     $('tbody').append('<tr>' + 
       '<td class="item">' + item + '</td>' +
-      '<td class="itemPrice"> $' + itemPrice + ' .00 </td>' +
+      '<td class="itemPrice"> $' + itemPrice + '.00 </td>' +
       '<td class="quantity"><input type="number" value="0" /></td>' +
       '<td><button class="btn btn-light btn-sm remove">Remove</button></td>' +
       '<td class="text-center totalItemValue"> </td>' +
@@ -57,6 +62,7 @@ $(document).ready(function () {
     updateCartTotal ();
     $(this).children('[name=item]').val('');
     $(this).children('[name=itemPrice]').val('');
+    $(this).children('[name=quantity]').val('');
     
   });
 });
