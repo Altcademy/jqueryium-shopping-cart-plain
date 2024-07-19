@@ -10,12 +10,11 @@ $(document).ready(function () {
     const itemUnitPrice = itemUnitPriceInput.val();
     const itemQuantity = itemQuantityInput.val();
 
-    const item = {
-      name: itemName,
-      unitPrice: itemUnitPrice,
-      quantity: itemQuantity
-    };
-
-    console.log(item);
+    $('#tableBody').prepend(`<tr>
+      <td>${itemName}</td>
+      <td>${itemUnitPrice}</td>
+      <td>${itemQuantity}</td>
+      <td>${itemUnitPrice * itemQuantity}</td>
+    </tr>`);
   });
 });

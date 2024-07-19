@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="js/application.js"></script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
-    <main>
-      <h1>Shopping Cart</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Item Name</th>
-            <th scope="col">Unit Price</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Total Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="inputRow">
-            <th><input id='inputItemName' type="text"></th>
-            <td><input id='inputUnitPrice' type="text"></td>
-            <td><input id='inputQuantity' type="text"></td>
-            <td><button id='addItemButton' class="btn btn-success">Add</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/application.js"></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1>Shopping Cart</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Item Name</th>
+          <th scope="col">Unit Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total Price</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr id="inputRow">
+          <th><input id='inputItemName' type="text"></th>
+          <td><input id='inputUnitPrice' type="text"></td>
+          <td><input id='inputQuantity' type="text"></td>
+          <td><button id='addItemButton' class="btn btn-success">Add</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+
 </html>
